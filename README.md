@@ -18,7 +18,17 @@ src/
     ├── components/     基础组件
     └── openings/       开场模板 A / B / C + 品牌动画
 public/fonts/           字体文件（黄油体、思源黑体），theme.ts 自动加载
+gallery/                组件预览页（实时预览 + 复制代码）
 ```
+
+## 组件预览页
+
+```bash
+npm run gallery         # 打开 http://localhost:5173
+npm run gallery:build   # 打包成静态网页，输出到 gallery-dist/
+```
+
+每个组件都有实时动画预览、用法示例和完整源码，一键复制。开场模板还能直接输入标题、钩子、要点、动画力度实时看效果，满意后点「复制为 episode.ts」粘贴回项目。新增组件后，在 `gallery/src/registry.tsx` 里加一条就会出现在预览页里。
 
 ## 做新一期
 

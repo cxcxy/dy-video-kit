@@ -1,13 +1,14 @@
 {
-  "name": "douyin-template",
+  "name": "dy-video-kit",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "抖音 AI 科普视频组件库（Remotion）",
   "repository": {},
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.535",
     "@remotion/fonts": "^4.0.535",
+    "@remotion/player": "^4.0.535",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.535"
@@ -15,15 +16,20 @@
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.535",
     "@types/react": "19.2.7",
+    "@types/react-dom": "^19.2.3",
     "@types/web": "0.0.166",
+    "@vitejs/plugin-react": "^4.5.2",
     "eslint": "9.39.5",
     "prettier": "3.8.1",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vite": "^6.3.5"
   },
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc && tsc -p gallery",
+    "gallery": "vite --config gallery/vite.config.ts",
+    "gallery:build": "vite build --config gallery/vite.config.ts"
   }
 }
